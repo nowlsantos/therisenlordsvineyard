@@ -1,0 +1,36 @@
+.mat-sidenav-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary);
+}
+  
+.mat-sidenav {
+    width: 70vw;
+    background: rgba(3, 77, 161, 0.8);
+    color: white;
+    padding-top: 1.2em;
+}
+
+.mat-sidenav .logo {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.mat-sidenav .logo p {
+    margin-left: 0.5em;
+}
+
+.mat-sidenav .logo img {
+    height: 50px;
+}
+
+.login {
+    position: absolute;
+    bottom: 0.6em;
+}
