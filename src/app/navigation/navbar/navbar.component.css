@@ -4,7 +4,6 @@
     left: 0;
     right: 0;
     z-index: 998;
-    flex: 1 1 auto;
     color: white;
     height: 40px;
     display: flex;
@@ -21,19 +20,6 @@
     padding: 0;
 }
 
-.mat-toolbar span {
-    margin: 0 0.3em;
-}
-
-.mat-toolbar .home {
-    flex: 1;
-}
-
-.mat-toolbar a {
-    font-size: small;
-    color: white;
-}
-
 .mat-icon-button i, .mat-icon-button .mat-icon {
     line-height: 22px;
     font-size: 1.3rem;
@@ -47,4 +33,27 @@
     flex-shrink: 0;
     line-height: 38px;
     border-radius: 50%;
+}
+
+.mat-toolbar ul {
+    display: flex;
+    list-style: none;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.mat-toolbar ul:first-of-type {
+    flex: 1;
+}
+
+.mat-toolbar ul li {
+    padding: 0 0.7em;
+}
+
+.mat-toolbar ul li a {
+    color: var(--lightblue);
+}
+
+.mat-toolbar ul li a:hover {
+    color: var(--core-title);
 }

@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 // import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { environment } from 'src/environments/environment';
         AngularFirestoreModule,
         AngularFireAuthModule,
         SharedModule,
+        HomeModule,
         AppRoutingModule
     ],
     providers: [],

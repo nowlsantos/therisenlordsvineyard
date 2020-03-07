@@ -1,12 +1,27 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home.component';
+import { Routes, RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
+import { VocationComponent } from './vocation/vocation.component';
+import { CoreValuesComponent } from './core-values/core-values.component';
+import { FooterComponent } from './footer/footer.component';
 
-
+const routes: Routes = [
+    { path: '', component: HomeComponent, data: { state: 'home' } }
+];
 
 @NgModule({
-    declarations: [],
+    declarations: [
+        HomeComponent,
+        HeaderComponent,
+        VocationComponent,
+        CoreValuesComponent,
+        FooterComponent,
+    ],
     imports: [
-        CommonModule
+        SharedModule,
+        RouterModule.forChild(routes)
     ]
 })
 export class HomeModule { }

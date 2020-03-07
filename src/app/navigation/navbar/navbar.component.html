@@ -2,10 +2,17 @@
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="open(true)">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-    <span class="home">
-        <a [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]=" { exact: true }">Home</a>
-    </span>
-    <!-- <span class="login">
-        <a [routerLink]="['/login']" routerLinkActive="active" [routerLinkActiveOptions]=" { exact: true }">Login</a>
-    </span> -->
+    <ul>
+        <li>
+            <a [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <ng-container *ngIf="!isHandset">
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Members</a></li>
+        </ng-container>
+        
+    </ul>
+    <ul>
+        <li><a href="#">Hello {{ displayName }}</a></li>
+    </ul>
 </mat-toolbar>

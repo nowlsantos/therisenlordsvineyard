@@ -1,0 +1,276 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1emp;
+    /* border: 1px solid orange; */
+    text-align: center;
+    padding: 1em 0;
+}
+
+.logo {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo .content h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1em;
+    margin: 0;
+}
+
+.logo .content p {
+    padding-left: 1em;
+    margin: 0;
+}
+
+.join {
+    margin: 1em;
+    padding: 0;
+}
+
+.join h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.about-us p {
+    padding: 0 0.8em;
+    margin: 0;
+}
+
+
+/* Mobile portrait */
+@media (max-width: 599.99px) and (orientation: portrait) {
+    footer {
+        width: 100%;
+        padding: 1em 0;
+        background-color: #375E97;
+        position: relative;
+    }
+}
+
+/* Tablet portrait */
+@media (min-width: 600px) and (max-width: 839.99px) and (orientation: portrait),
+        /* Tablet portrait wide */
+       (min-width: 840px) and (orientation: portrait) {
+    footer {
+        width: 100%;
+        max-width: 1280px; 
+        margin: 0 auto;
+        background-color: #375E97;
+        position: relative;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1emp;
+        /* border: 1px solid orange; */
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em;
+    }
+
+    .logo img {
+        height: 50px
+    }
+
+    .logo .content h3 {
+        font-size: 1rem;
+        widtH: 40%;
+        line-height: 1.5;
+    }
+
+    .logo .content p {
+        font-size: 0.9rem;
+    }
+
+    .join {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.1;
+    }
+
+    .join h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5em;
+    }
+
+    .join p {
+        font-size: 0.9rem;
+        line-height: 1.1;
+    }
+
+    .about-us {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us p {
+        padding: 0.5em;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 600px) and (max-width: 959.99px) and (orientation: landscape) {
+    footer {
+        width: 100%;
+        max-width: 1280px; 
+        margin: 0 auto;
+        background-color: #375E97;
+        position: relative;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1emp;
+        /* border: 1px solid orange; */
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .logo .content h3 {
+        font-size: 1rem;
+        widtH: 40%;
+        line-height: 1.5;
+    }
+
+    .logo .content p {
+        font-size: 0.9rem;
+    }
+
+    .join {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.1;
+    }
+
+    .join h3 {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .about-us {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us p {
+        padding: 0.5em;
+    }
+}
+
+/* Web landscape */
+@media (min-width: 1280px) and (orientation: landscape),
+       /* Web landscape normal */ 
+       (min-width: 960px) and (max-width: 1279.99px) and (orientation: landscape){
+    footer {
+        width: 100%;
+        max-width: 1280px; 
+        margin: 0 auto;
+        background-color: #375E97;
+        position: relative;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1emp;
+        /* border: 1px solid orange; */
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .logo .content h3 {
+        font-size: 1rem;
+        widtH: 40%;
+        line-height: 1.5;
+    }
+
+    .logo .content p {
+        font-size: 0.9rem;
+    }
+
+    .join {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.1;
+    }
+
+    .join h3 {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .about-us {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us p {
+        padding: 0.5em;
+    }
+}

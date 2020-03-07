@@ -1,0 +1,30 @@
+#wrapper {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    grid-template-areas:
+        "header"
+        "vision"
+        "core-values"
+        "footer"
+}
+
+.header {
+    grid-area: header;
+}
+
+.vision {
+    grid-area: vision;
+}
+
+.theme {
+    grid-area: theme;
+}
+
+.core-values {
+    grid-area: core-values;
+}
+
+.footer {
+    grid-area: footer;
+}

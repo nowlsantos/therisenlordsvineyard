@@ -1,0 +1,141 @@
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin: 0.6em auto;
+    background-color: var(--secondary);
+    position: relative;
+}
+
+.vocation {
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.mat-card {
+    background-color: var(--primary);
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 1px 2px 2px -2px rgba(0, 0, 0, 0.4), 0px 1px 1px 0px rgba(0, 0, 0, 0.4), 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.mat-card .mat-card-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mat-card-content {
+    padding-top: 0.7em;
+}
+
+:host ::ng-deep .mat-card-header-text {
+    margin: 0;
+}
+
+/* Tablet portrait */
+@media (min-width: 600px) and (max-width: 839.99px) and (orientation: portrait),
+       (min-width: 840px) and (orientation: portrait) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        margin: 0.6em auto;
+        background-color: var(--core-title);
+    }
+
+    .vocation {
+        padding: 1em;
+        box-sizing: border-box;
+    }
+
+    .mat-card {
+        background-color: var(--cardbg);
+    }
+
+    .mat-card .mat-card-image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mat-card:not([class*=mat-elevation-z]) {
+        box-shadow: 1px 2px 2px -2px rgba(0, 0, 0, 0.4), 0px 1px 1px 0px rgba(0, 0, 0, 0.4), 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+    }
+    
+    .mat-card-content {
+        padding-top: 0.7em;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 600px) and (max-width: 959.99px) and (orientation: landscape) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        margin: 0.6em auto;
+        background-color: var(--core-title);
+    }
+
+    .vocation {
+        padding: 1em;
+        box-sizing: border-box;
+    }
+
+    .mat-card {
+        background-color: var(--cardbg);
+    }
+
+    .mat-card .mat-card-image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mat-card:not([class*=mat-elevation-z]) {
+        box-shadow: 1px 2px 2px -2px rgba(0, 0, 0, 0.4), 0px 1px 1px 0px rgba(0, 0, 0, 0.4), 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+    }
+    
+    .mat-card-content {
+        padding-top: 0.7em;
+    }
+}
+
+/* Web landscape */
+@media (min-width: 1280px) and (orientation: landscape),
+        /* Web landscape normal */
+       (min-width: 960px) and (max-width: 1279.99px) and (orientation: landscape) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        max-width: 1280px;
+        margin: 0.6em auto;
+        background-color: var(--core-title);
+    }
+
+    .vocation {
+        padding: 1em;
+        box-sizing: border-box;
+    }
+
+    .mat-card {
+        background-color: var(--cardbg);
+    }
+
+    .mat-card .mat-card-image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mat-card:not([class*=mat-elevation-z]) {
+        box-shadow: 1px 2px 2px -2px rgba(0, 0, 0, 0.4), 0px 1px 1px 0px rgba(0, 0, 0, 0.4), 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+    }
+    
+    .mat-card-content {
+        padding-top: 0.7em;
+    }
+}
