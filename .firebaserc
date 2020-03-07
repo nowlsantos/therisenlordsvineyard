@@ -1,14 +1,5 @@
 {
-  "targets": {
-    "trlv-ccc": {
-      "hosting": {
-        "therisenlordsvineyard": [
-          "trlv-ccc"
-        ]
-      }
-    }
-  },
   "projects": {
-    "default": "trlv-ccc"
+    "default": "trlv-community"
   }
 }

@@ -7,6 +7,7 @@ import { MatSidenavContainer, MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 // import { ViewPortService } from './services/viewport.service';
 import { SubSink } from 'subsink';
+import { LoginService } from './admin/services/login.services';
 
 @Component({
     selector: 'app-root',
@@ -15,6 +16,8 @@ import { SubSink } from 'subsink';
 })
 export class AppComponent implements OnInit, OnDestroy {
     isHandset = false;
+    isLoggedIn = false;
+
     private subs = new SubSink();
     @ViewChild(MatSidenavContainer, { static: false }) sidenavContainer: MatSidenavContainer;
     @ViewChild('sidenav', { static: false }) sidenav: MatSidenav;
@@ -33,12 +36,18 @@ export class AppComponent implements OnInit, OnDestroy {
     );
 
     constructor(
+        private loginService: LoginService,
         private breakpointObserver: BreakpointObserver,
         // private viewportService: ViewPortService,
         private router: Router) { }
 
     ngOnInit() {
         this.onLayoutChange();
+
+        this.loginService.login$.subscribe(isLogged => {
+            this.isLoggedIn = isLogged;
+            console.log('LOGGED IN: ', this.isLoggedIn);
+        });
     }
 
     ngOnDestroy() {
@@ -94,16 +103,7 @@ export class AppComponent implements OnInit, OnDestroy {
         );
     }
 
-    close(reason: string) {
-        console.log(reason);
-        this.sidenav.close();
-      }
-
-    /* openSideNav() {
-        this.sidenav.open();
-    }
-
     closeSideNav() {
         this.sidenav.close();
-    } */
+    }
 }

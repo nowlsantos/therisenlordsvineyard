@@ -1,0 +1,30 @@
+<div *ngIf="authService.user$ | async as user; else login">
+    <div class="admin">
+        <div class="user-logged">
+            <img [src]="user.photoURL" alt="">
+            <h2>Welcome {{ user.displayName }}</h2>
+            <p>Don't forget to logout when closing this app.</p>
+            <button mat-raised-button color="primary" (click)="onLogout()">Sign Out</button>
+        </div>
+    </div>
+</div>
+
+<ng-template #login>
+    <div class="admin">
+        <div class="providers">
+            <h3>Sign in with your preferred providers</h3>
+            <div class="facebook" (click)="onLogin('facebook')">
+                <img src="../../../assets/facebook_logo.png" alt="Facebook Logo">
+                <p>Sign in with Facebook</p>
+            </div>
+            <div class="google" (click)="onLogin('google')">
+                <img src="../../../assets/google_logo.png" alt="Google Logo">
+                <p>Sign in with Google</p>
+            </div>
+            <div class="email" (click)="onLogin('email')">
+                <img src="../../../assets/gmail_logo.png" alt="Gmail Logo">
+                <p>Sign in with Email</p>
+            </div>
+        </div>
+    </div>
+</ng-template>

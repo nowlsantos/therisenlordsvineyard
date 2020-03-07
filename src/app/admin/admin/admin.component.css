@@ -1,0 +1,118 @@
+.admin {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.user-logged {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    outline: 1px solid grey;
+    outline-offset: -10px;
+    color: black;
+}
+
+.user-logged img {
+    height: 100px;
+    width:100px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom: 1em;
+}
+
+.user-logged h2 {
+    font-size: 1.2rem;
+}
+
+.user-logged p {
+    font-size: 0.8rem;
+}
+
+.user-logged button.mat-raised-button {
+    text-transform: uppercase;
+    color: white;
+}
+
+.providers h3 {
+    text-align: center;
+    color: black;
+}
+
+.providers {
+    position: relative;
+    width: 80%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.providers .facebook img,
+.providers .google img,
+.providers .email img {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    padding-right: 10px;
+}
+
+.providers .facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 30px;
+    background-color: #3a559f;
+    padding: 5px 5px;
+    box-shadow: 2px 2px 2px darkgrey;
+}
+
+.providers .google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 30px;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 5px 5px;
+    box-shadow: 2px 2px 2px darkgrey;
+}
+
+.providers .email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 30px;
+    background-color: #e84f4b;
+    padding: 5px 5px;
+    box-shadow: 2px 2px 2px darkgrey;
+}
+
+.providers .facebook p {
+    padding: 0;
+    margin: 0;
+}
+
+.providers .google p {
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+.providers .email p {
+    padding: 0;
+    margin: 0;
+}
