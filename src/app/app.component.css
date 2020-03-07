@@ -39,3 +39,8 @@
     position: absolute;
     bottom: 0.6em;
 }
+
+main {
+    position: relative;
+    /* padding-top: 40px; */
+}

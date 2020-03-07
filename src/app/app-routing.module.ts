@@ -6,6 +6,10 @@ const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
         path: 'home', component: HomeComponent,
+        data: {
+            preload: true,
+            state: 'home'
+        }
     },
     {
         path: 'admin',

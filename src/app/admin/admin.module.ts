@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 import { LoginComponent } from './login/login.component';
-import { AdminComponent } from './admin/admin.component';
+import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
     {

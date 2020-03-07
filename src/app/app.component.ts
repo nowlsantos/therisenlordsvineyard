@@ -4,15 +4,17 @@ import { Subscription } from 'rxjs';
 import { map, share, tap } from 'rxjs/operators';
 import { ViewPort } from './shared/viewport.model';
 import { MatSidenavContainer, MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { ViewPortService } from './services/viewport.service';
 import { SubSink } from 'subsink';
 import { LoginService } from './admin/services/login.services';
+import { routeAnimation } from './app.animation';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['./app.component.css'],
+    animations: [routeAnimation]
 })
 export class AppComponent implements OnInit, OnDestroy {
     isHandset = false;
@@ -77,7 +79,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
                     /* For high res like the ipad pro  */
                     case this.breakpointObserver.isMatched('(min-width: 840px) and (orientation: portrait)'):
-                        this.isHandset = false;
+                        this.isHandset = true;
                         this.viewPort.device = 'tablet';
                         this.viewPort.orientation = 'portrait';
                         break;
@@ -97,12 +99,16 @@ export class AppComponent implements OnInit, OnDestroy {
                         this.isHandset = false;
                         break;
                 }
-                // console.log(this.viewPort);
+                console.log(this.viewPort);
                 // console.log(this.breakpointObserver);
                 this.viewPort.isHandset = this.isHandset;
                 this.viewportService.broadcastLayout(this.viewPort);
             })
         );
+    }
+
+    getState(outlet: RouterOutlet) {
+        return outlet && outlet.activatedRouteData && outlet.activatedRouteData.state;
     }
 
     closeSideNav() {

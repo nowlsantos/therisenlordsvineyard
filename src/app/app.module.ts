@@ -12,7 +12,7 @@ import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navigation/navbar/navbar.component';
+import { NavbarComponent } from './navigation/navbar.component';
 import { environment } from 'src/environments/environment';
 
 @NgModule({

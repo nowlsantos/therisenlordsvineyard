@@ -1,6 +1,9 @@
 <div class="container">
     <mat-sidenav-container (backdropClick)="closeSideNav()">
-        <mat-sidenav #sidenav fixedInViewport>
+        <mat-sidenav #sidenav 
+            fixedInViewport 
+            role="navigation" 
+            [attr.role]="isHandset ? 'dialog' : 'navigation'">
             <mat-list class="logo">
                 <img src="../../../assets/trlv_logo.png" alt="TRLV Logo">
                 <p>The Risen Lord's Vineyard</p>
@@ -27,12 +30,13 @@
                     <a mat-list-item [routerLink]="['/admin']" (click)="closeSideNav()">Logout</a>
                 </mat-nav-list>
             </ng-template>
-            
         </mat-sidenav>
 
-        <mat-sidenav-content>
-            <app-navbar *ngIf="isHandset" (opened)=sidenav.toggle()></app-navbar>
-            <router-outlet></router-outlet>
+        <mat-sidenav-content class="sidenav-content" role="main">
+            <main [@routeAnimation]="getState(myOutlet)">
+                <app-navbar (opened)=sidenav.toggle()></app-navbar>
+                <router-outlet #myOutlet="outlet"></router-outlet>
+            </main>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>

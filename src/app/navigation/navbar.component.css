@@ -50,10 +50,14 @@
     padding: 0 0.7em;
 }
 
+.mat-toolbar ul li:last-child {
+    padding-right: 1.5em;
+}
+
 .mat-toolbar ul li a {
     color: var(--lightblue);
 }
 
 .mat-toolbar ul li a:hover {
-    color: var(--core-title);
+    color: var(--secondary);
 }
