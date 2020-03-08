@@ -50,9 +50,9 @@
     padding: 0 1.5em;
 }
 
-/* .mat-toolbar ul li:last-child {
-    padding-right: 1.5em;
-} */
+.mat-toolbar ul li:first-child {
+    padding-left: 0;
+}
 
 .mat-toolbar ul li a {
     color: var(--lightblue);

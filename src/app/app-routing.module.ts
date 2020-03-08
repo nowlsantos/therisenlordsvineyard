@@ -20,6 +20,22 @@ const routes: Routes = [
             state: 'admin'
         }
     },
+    {
+        path: 'members',
+        loadChildren: () => import('./members/member.module').then( m => m.MemberModule ),
+        data: {
+            preload: true,
+            state: 'members'
+        }
+    },
+    {
+        path: 'events',
+        loadChildren: () => import('./members/member.module').then( m => m.MemberModule ),
+        data: {
+            preload: true,
+            state: 'events'
+        }
+    },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];

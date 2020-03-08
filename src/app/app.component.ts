@@ -49,7 +49,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.subs.add(
             this.loginService.login$.subscribe(isLogged => {
                 this.isLoggedIn = isLogged;
-                // console.log('LOGGED IN: ', this.isLoggedIn);
+                console.log('LOGGED IN: ', this.isLoggedIn);
             })
         );
     }
@@ -100,7 +100,7 @@ export class AppComponent implements OnInit, OnDestroy {
                         break;
                 }
                 console.log(this.viewPort);
-                console.log(this.breakpointObserver);
+                // console.log(this.breakpointObserver);
                 this.viewPort.isHandset = this.isHandset;
                 this.viewportService.broadcastLayout(this.viewPort);
             })

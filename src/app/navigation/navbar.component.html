@@ -1,40 +1,40 @@
 <mat-toolbar color="primary">
-    <button *ngIf="isHandset"
-        type="button"
-        aria-label="Toggle sidenav" 
-        mat-icon-button 
-        (click)="open(true)">
+    <button *ngIf="isHandset" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="open(true)">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
     <ul>
         <li>
-            <a [routerLink]="['/home']" 
-                routerLinkActive="active" 
-                [routerLinkActiveOptions]="{ exact: true }">Home
+            <a [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home
             </a>
         </li>
         <ng-container *ngIf="!isHandset">
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Members</a></li>
+            <li>
+                <a [routerLink]="['/events']" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Events
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/members']" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Members
+                </a>
+            </li>
             <ng-container *ngIf="!isHandset && displayName != Friend">
                 <li>
-                    <a [routerLink]="['/admin']" 
-                        routerLinkActive="active" 
+                    <a [routerLink]="['/admin']" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }">Login
                     </a>
-                </li>    
+                </li>
             </ng-container>
 
             <ng-template #logout>
                 <li>
-                    <a [routerLink]="['/admin']" 
-                    routerLinkActive="active" 
-                    [routerLinkActiveOptions]="{ exact: true }">Logout
+                    <a [routerLink]="['/admin']" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Logout
                     </a>
                 </li>
             </ng-template>
         </ng-container>
-        
+
     </ul>
     <ul>
         <li>Hello {{ displayName }}</li>
