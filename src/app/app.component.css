@@ -1,16 +1,16 @@
 .mat-sidenav-container {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     background-color: var(--primary);
 }
   
 .mat-sidenav {
-    width: 70vw;
+    width: 50vw;
     background: rgba(3, 77, 161, 0.8);
     color: white;
     padding-top: 1.2em;
@@ -30,17 +30,7 @@
     height: 50px;
 }
 
-.login {
-    position: absolute;
-    bottom: 0.6em;
-}
-
-.logout {
-    position: absolute;
-    bottom: 0.6em;
-}
-
 main {
     position: relative;
-    /* padding-top: 40px; */
+    padding-top: 40px;
 }

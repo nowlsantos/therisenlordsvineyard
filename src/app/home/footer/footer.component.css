@@ -54,6 +54,10 @@
     margin: 0;
 }
 
+.join .email a {
+    color: var(--secondary);
+}
+
 
 /* Mobile portrait */
 @media (max-width: 599.99px) and (orientation: portrait) {
@@ -137,6 +141,10 @@
     .about-us p {
         padding: 0.5em;
     }
+
+    .join .email a {
+        color: var(--secondary);
+    }
 }
 
 /* Tablet landscape */
@@ -204,6 +212,10 @@
 
     .about-us p {
         padding: 0.5em;
+    }
+
+    .join .email a {
+        color: var(--secondary);
     }
 }
 
@@ -273,5 +285,9 @@
 
     .about-us p {
         padding: 0.5em;
+    }
+
+    .join .email a {
+        color: var(--secondary);
     }
 }

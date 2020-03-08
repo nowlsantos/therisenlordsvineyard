@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { ViewPortService } from 'src/app/services/viewport.service';
 import { AuthService } from 'src/app/admin/services/auth.service';
+import { LoginService } from '../admin/services/login.services';
 
 @Component({
     selector: 'app-navbar',
@@ -13,6 +14,7 @@ export class NavbarComponent implements OnInit {
     displayName = 'Friend';
 
     constructor(private viewportService: ViewPortService,
+                private loginService: LoginService,
                 private authService: AuthService) {}
 
     ngOnInit() {
@@ -24,6 +26,13 @@ export class NavbarComponent implements OnInit {
         this.authService.user$.subscribe(user => {
             if ( user ) {
                 this.displayName = user.displayName;
+            }
+        });
+
+        this.loginService.login$.subscribe(isLoggedIn => {
+            // console.log('LoginService::logged- ', isLoggedIn);
+            if ( !isLoggedIn ) {
+                this.displayName = 'Friend';
             }
         });
     }

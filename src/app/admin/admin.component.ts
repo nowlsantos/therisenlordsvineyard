@@ -12,8 +12,7 @@ export class AdminComponent implements OnInit {
     constructor(public authService: AuthService,
                 private router: Router) { }
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 
     onLogin(provider: string) {
         switch ( provider ) {
@@ -33,5 +32,6 @@ export class AdminComponent implements OnInit {
 
     onLogout() {
         this.authService.signOut();
+        this.router.navigate(['/home']);
     }
 }

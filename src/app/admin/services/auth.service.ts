@@ -1,5 +1,4 @@
 import { Injectable, NgZone } from '@angular/core';
-import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
@@ -19,7 +18,6 @@ export class AuthService {
         private afAuth: AngularFireAuth,
         private afs: AngularFirestore,
         private loginService: LoginService,
-        private router: Router,
         private ngZone: NgZone) {
         this.user$ = this.afAuth.authState.pipe(
             switchMap(user => {
@@ -52,24 +50,22 @@ export class AuthService {
         return this.afAuth.createUserWithEmailAndPassword(email, password)
             .then(credential => {
                 // this.sendVerificationSignUp();
-                // this.updateUserData(credential.user);
-                this.router.navigate(['/login']);
+                this.updateUserData(credential.user);
             });
         // .catch(error => this.getErrorMessage(error));
     }
 
-    async sendVerificationSignUp() {
+    /* async sendVerificationSignUp() {
         (await this.afAuth.currentUser).sendEmailVerification()
             .then(() => this.router.navigate(['/login']));
-    }
+    } */
 
     async emailSignIn(email: string, password: string) {
         return await this.afAuth.signInWithEmailAndPassword(email, password)
             .then(credential => {
                 this.ngZone.run(() => {
-                    console.log('_User: ', credential);
-                    // this.router.navigate(['/login']);
-                    //  this.updateUserData(credential.member);
+                    // console.log('_User: ', credential);
+                    this.updateUserData(credential.user);
                 });
             });
         // .catch(error => this.getErrorMessage(error));
@@ -77,9 +73,7 @@ export class AuthService {
 
     async signOut() {
         await this.afAuth.signOut();
-        this.user$ = null;
         this.loginService.broadcastLogin(false);
-        this.router.navigate(['/home']);
     }
 
     private updateUserData({ uid, displayName, photoURL, email }: User) {

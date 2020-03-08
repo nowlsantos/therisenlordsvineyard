@@ -21,19 +21,19 @@ const routes: Routes = [
         }
     },
     {
+        path: 'events',
+        loadChildren: () => import('./events/event.module').then( m => m.EventModule ),
+        data: {
+            preload: true,
+            state: 'events'
+        }
+    },
+    {
         path: 'members',
         loadChildren: () => import('./members/member.module').then( m => m.MemberModule ),
         data: {
             preload: true,
             state: 'members'
-        }
-    },
-    {
-        path: 'events',
-        loadChildren: () => import('./members/member.module').then( m => m.MemberModule ),
-        data: {
-            preload: true,
-            state: 'events'
         }
     },
     // otherwise redirect to home

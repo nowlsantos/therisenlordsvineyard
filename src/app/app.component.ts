@@ -1,10 +1,9 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Subscription } from 'rxjs';
 import { map, share, tap } from 'rxjs/operators';
 import { ViewPort } from './shared/viewport.model';
 import { MatSidenavContainer, MatSidenav } from '@angular/material/sidenav';
-import { Router, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { ViewPortService } from './services/viewport.service';
 import { SubSink } from 'subsink';
 import { LoginService } from './admin/services/login.services';
@@ -40,8 +39,7 @@ export class AppComponent implements OnInit, OnDestroy {
     constructor(
         private loginService: LoginService,
         private breakpointObserver: BreakpointObserver,
-        private viewportService: ViewPortService,
-        private router: Router) { }
+        private viewportService: ViewPortService) { }
 
     ngOnInit() {
         this.onLayoutChange();
@@ -49,7 +47,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.subs.add(
             this.loginService.login$.subscribe(isLogged => {
                 this.isLoggedIn = isLogged;
-                console.log('LOGGED IN: ', this.isLoggedIn);
+                // console.log('LOGGED IN: ', this.isLoggedIn);
             })
         );
     }
@@ -99,7 +97,7 @@ export class AppComponent implements OnInit, OnDestroy {
                         this.isHandset = false;
                         break;
                 }
-                console.log(this.viewPort);
+                // console.log(this.viewPort);
                 // console.log(this.breakpointObserver);
                 this.viewPort.isHandset = this.isHandset;
                 this.viewportService.broadcastLayout(this.viewPort);

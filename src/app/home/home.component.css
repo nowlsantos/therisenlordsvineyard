@@ -4,7 +4,7 @@
     margin: 0;
     grid-template-areas:
         "header"
-        "vision"
+        "vocation"
         "core-values"
         "footer"
 }
@@ -13,12 +13,8 @@
     grid-area: header;
 }
 
-.vision {
-    grid-area: vision;
-}
-
-.theme {
-    grid-area: theme;
+.vocation {
+    grid-area: vocation;
 }
 
 .core-values {

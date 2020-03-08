@@ -1,5 +1,6 @@
 <mat-sidenav-container class="sidenav-container" (backdropClick)="closeSideNav()">
-    <mat-sidenav #sidenav 
+    <mat-sidenav #sidenav
+        class="sidenav"
         fixedInViewport 
         role="navigation" 
         [attr.role]="isHandset ? 'dialog' : 'navigation'">
@@ -20,20 +21,20 @@
         
         <mat-divider></mat-divider>
         
-        <mat-nav-list class="login" *ngIf="!isLoggedIn; else logout">
+        <mat-nav-list *ngIf="!isLoggedIn; else logout">
             <a mat-list-item [routerLink]="['/admin']" (click)="closeSideNav()">Login</a>
         </mat-nav-list>
         
         <ng-template #logout>
-            <mat-nav-list class="logout">
+            <mat-nav-list>
                 <a mat-list-item [routerLink]="['/admin']" (click)="closeSideNav()">Logout</a>
             </mat-nav-list>
         </ng-template>
     </mat-sidenav>
 
     <mat-sidenav-content class="sidenav-content" role="main">
+        <app-navbar (opened)=sidenav.toggle()></app-navbar>
         <main [@routeAnimation]="getState(myOutlet)">
-            <app-navbar (opened)=sidenav.toggle()></app-navbar>
             <router-outlet #myOutlet="outlet"></router-outlet>
         </main>
     </mat-sidenav-content>
