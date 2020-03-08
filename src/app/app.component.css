@@ -6,6 +6,7 @@
     bottom: 0;
     left: 0;
     right: 0; */
+    position: relative;
     background-color: var(--primary);
 }
   
@@ -32,5 +33,5 @@
 
 main {
     position: relative;
-    padding-top: 40px;
+    /* padding-top: 40px; */
 }
