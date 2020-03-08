@@ -69,12 +69,13 @@ header {
 }
 
 /* Tablet landscape */
-@media (min-width: 600px) and (max-width: 959.99px) and (orientation: landscape) {
+@media (min-width: 600px) and (max-width: 959.99px) and (orientation: landscape),
+       (max-width: 959.99px) and (orientation: landscape) {
     header {
         width: 100%;
         margin: 0 auto;
         position: relative;
-        background: url('../../../assets/header_web_cover.jpg') no-repeat center center/cover;
+        background: url('../../../assets/header_web_cover.jpg') no-repeat top center/cover;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -86,7 +87,7 @@ header {
         width: 100%;
         font-family: "Roboto Condensed", sans-serif;
         font-weight: 700;
-        font-size: 3rem;
+        font-size: 2rem;
         color: var(--secondary);
         text-shadow: 1px 1px 3px #000000;
         margin-top: 2em;
@@ -95,7 +96,7 @@ header {
     
     .app-header h3 {
         font-family: 'Times New Roman', Times, serif;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         color: var(--white);
         text-shadow: 1px 1px 3px #000000;
     }

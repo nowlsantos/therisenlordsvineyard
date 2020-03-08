@@ -84,7 +84,7 @@ export class AppComponent implements OnInit, OnDestroy {
                         this.viewPort.orientation = 'portrait';
                         break;
 
-                    // case this.breakpointObserver.isMatched('(max-width: 959.99px) and (orientation: landscape)'):
+                    case this.breakpointObserver.isMatched('(max-width: 959.99px) and (orientation: landscape)'):
                     case this.breakpointObserver.isMatched('(min-width: 600px) and (max-width: 959.99px) and (orientation: landscape)'):
                         this.viewPort.device = 'tablet';
                         this.viewPort.orientation = 'landscape';
@@ -100,7 +100,7 @@ export class AppComponent implements OnInit, OnDestroy {
                         break;
                 }
                 console.log(this.viewPort);
-                // console.log(this.breakpointObserver);
+                console.log(this.breakpointObserver);
                 this.viewPort.isHandset = this.isHandset;
                 this.viewportService.broadcastLayout(this.viewPort);
             })

@@ -6,6 +6,7 @@ const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
         path: 'home', component: HomeComponent,
+        loadChildren: () => import('./home/home.module').then( m => m.HomeModule ),
         data: {
             preload: true,
             state: 'home'
@@ -13,7 +14,7 @@ const routes: Routes = [
     },
     {
         path: 'admin',
-        loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+        loadChildren: () => import('./admin/admin.module').then( m => m.AdminModule ),
         data: {
             preload: true,
             state: 'admin'

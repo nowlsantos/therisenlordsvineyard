@@ -140,7 +140,8 @@
 }
 
 /* Tablet landscape */
-@media (min-width: 600px) and (max-width: 959.99px) and (orientation: landscape) {
+@media (min-width: 600px) and (max-width: 959.99px) and (orientation: landscape),
+       (max-width: 959.99px) and (orientation: landscape) {
     footer {
         width: 100%;
         max-width: 1280px; 
@@ -189,7 +190,7 @@
     }
 
     .join h3 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: bold;
     }
 

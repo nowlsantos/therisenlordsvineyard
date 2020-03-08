@@ -16,27 +16,27 @@
         <ng-container *ngIf="!isHandset">
             <li><a href="#">Events</a></li>
             <li><a href="#">Members</a></li>
+            <ng-container *ngIf="!isHandset && displayName != Friend">
+                <li>
+                    <a [routerLink]="['/admin']" 
+                        routerLinkActive="active" 
+                        [routerLinkActiveOptions]="{ exact: true }">Login
+                    </a>
+                </li>    
+            </ng-container>
+
+            <ng-template #logout>
+                <li>
+                    <a [routerLink]="['/admin']" 
+                    routerLinkActive="active" 
+                    [routerLinkActiveOptions]="{ exact: true }">Logout
+                    </a>
+                </li>
+            </ng-template>
         </ng-container>
         
     </ul>
     <ul>
         <li>Hello {{ displayName }}</li>
-        <ng-container *ngIf="!isHandset && displayName != 'Friend'; else logout">
-            <li>
-                <a [routerLink]="['/admin']" 
-                    routerLinkActive="active" 
-                    [routerLinkActiveOptions]="{ exact: true }">Login
-                </a>
-            </li>
-            
-        </ng-container>
-        <ng-template #logout>
-            <li>
-                <a [routerLink]="['/admin']" 
-                routerLinkActive="active" 
-                [routerLinkActiveOptions]="{ exact: true }">Logout
-                </a>
-            </li>
-        </ng-template>
     </ul>
 </mat-toolbar>

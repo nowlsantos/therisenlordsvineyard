@@ -8,7 +8,10 @@ import { CoreValuesComponent } from './core-values/core-values.component';
 import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
-    { path: '', component: HomeComponent, data: { state: 'home' } }
+    {
+        path: '', component: HomeComponent,
+        data: { state: 'home' }
+    }
 ];
 
 @NgModule({

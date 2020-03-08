@@ -50,8 +50,8 @@
 
 .providers {
     position: relative;
-    width: 70%;
-    height: 300px;
+    width: 90%;
+    height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,8 +125,8 @@
 
     .providers {
         position: relative;
-        width: 50%;
-        height: 300px;
+        width: 70%;
+        height: 280px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -139,8 +139,8 @@
 @media (min-width: 600px) and (max-width: 959.99px) and (orientation: landscape) {
     .providers {
         position: relative;
-        width: 40%;
-        height: 300px;
+        width: 50%;
+        height: 280px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -150,13 +150,24 @@
 }
 
 /* Web landscape */
-@media (min-width: 1280px) and (orientation: landscape),
-       (min-width: 960px) and (max-width: 1279.99px) and (orientation: landscape) {
-
+@media (min-width: 960px) and (max-width: 1279.99px) and (orientation: landscape)  {
     .providers {
         position: relative;
-        width: 30%;
-        height: 300px;
+        width: 50%;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
+    }
+}
+
+@media (min-width: 1280px) and (orientation: landscape) {
+    .providers {
+        position: relative;
+        width: 40%;
+        height: 280px;
         display: flex;
         flex-direction: column;
         align-items: center;

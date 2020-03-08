@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
     @Output() opened = new EventEmitter<boolean>();
     isHandset = false;
-    displayName: string;
+    displayName = 'Friend';
 
     constructor(private viewportService: ViewPortService,
                 private authService: AuthService) {}
@@ -22,13 +22,15 @@ export class NavbarComponent implements OnInit, OnDestroy {
         this.subs.add(
             this.viewportService.viewportLayout$.subscribe(handSet => {
                 this.isHandset = handSet.isHandset;
-                // console.log(this.isHandset);
+                console.log('isHandset:', this.isHandset);
             })
         );
 
         this.subs.add(
             this.authService.user$.subscribe(user => {
-                user ? this.displayName = user.displayName : this.displayName = 'Friend!';
+                if ( user ) {
+                    this.displayName = user.displayName;
+                }
             })
         );
     }
