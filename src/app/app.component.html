@@ -1,9 +1,5 @@
 <mat-sidenav-container class="sidenav-container" (backdropClick)="closeSideNav()">
-    <mat-sidenav #sidenav
-        class="sidenav"
-        fixedInViewport 
-        role="navigation" 
-        [attr.role]="isHandset ? 'dialog' : 'navigation'">
+    <mat-sidenav #sidenav class="sidenav" fixedInViewport >
         <mat-list class="logo">
             <img src="../../../assets/trlv_logo.png" alt="TRLV Logo">
             <p>The Risen Lord's Vineyard</p>
@@ -33,7 +29,7 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="sidenav-content" role="main">
-        <app-navbar (opened)=sidenav.toggle()></app-navbar>
+        <app-navbar (opened)=sidenav.open()></app-navbar>
         <main [@routeAnimation]="getState(myOutlet)">
             <router-outlet #myOutlet="outlet"></router-outlet>
         </main>

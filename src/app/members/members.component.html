@@ -1,4 +1,43 @@
-<p></p>
-<p></p>
-<p></p>
-<p>member works!</p>
+<div class="filters">
+    <mat-tab-group>
+        <mat-tab label="Members">
+            <div class="grid">
+                <div *ngFor="let member of member$ | async as Member; trackBy: trackByFn">
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>{{ member.displayName }}</mat-card-title>
+                            <mat-card-subtitle>{{ member.name }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image [src]="member.photo" alt="Photo of member">
+                    </mat-card>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Sisters">
+            <div class="grid">
+                <div *ngFor="let member of sister$ | async as Member; trackBy: trackByFn">
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>{{ member.displayName }}</mat-card-title>
+                            <mat-card-subtitle>{{ member.name }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image [src]="member.photo" alt="Photo of Sisters">
+                    </mat-card>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Brothers">
+            <div class="grid" >
+                <div *ngFor="let member of brother$ | async as Member; trackBy: trackByFn">
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>{{ member.displayName }}</mat-card-title>
+                            <mat-card-subtitle>{{ member.name }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image [src]="member.photo" alt="Photo of Brothers">
+                    </mat-card>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

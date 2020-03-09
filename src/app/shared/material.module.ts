@@ -5,7 +5,7 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
 import { PortalModule } from '@angular/cdk/portal';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 // import {CdkStepperModule} from '@angular/cdk/stepper';
-// import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTableModule} from '@angular/cdk/table';
 // import {CdkTreeModule} from '@angular/cdk/tree';
 // import {MatAutocompleteModule} from '@angular/material/autocomplete';
 // import {MatBadgeModule} from '@angular/material/badge';
@@ -36,8 +36,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 // import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 // import {MatSortModule} from '@angular/material/sort';
-// import {MatTableModule} from '@angular/material/table';
-// import {MatTabsModule} from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 // import {MatTooltipModule} from '@angular/material/tooltip';
 // import {MatTreeModule} from '@angular/material/tree';
@@ -47,7 +47,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         A11yModule,
         ClipboardModule,
         // CdkStepperModule,
-        // CdkTableModule,
+        CdkTableModule,
         // CdkTreeModule,
         // DragDropModule,
         // MatAutocompleteModule,
@@ -80,8 +80,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         // MatSlideToggleModule,
         MatSnackBarModule,
         // MatSortModule,
-        // MatTableModule,
-        // MatTabsModule,
+        MatTableModule,
+        MatTabsModule,
         MatToolbarModule,
         // MatTooltipModule,
         // MatTreeModule,

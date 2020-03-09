@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewPortService } from '../../services/viewport.service';
 
 @Component({
     selector: 'app-header',
@@ -8,11 +7,8 @@ import { ViewPortService } from '../../services/viewport.service';
 })
 export class HeaderComponent implements OnInit {
 
-    constructor(private viewportService: ViewPortService) { }
+    constructor() { }
 
     ngOnInit() {
-        this.viewportService.viewportLayout$.subscribe(viewport => {
-            // console.log('HeaderComp: ', viewport);
-        });
     }
 }

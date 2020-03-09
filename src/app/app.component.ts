@@ -67,7 +67,7 @@ export class AppComponent implements OnInit, OnDestroy {
                         break;
 
                     case this.breakpointObserver.isMatched('(max-width: 599.99px) and (orientation: landscape)'):
-                        this.isHandset = true;
+                        this.isHandset = false;
                         this.viewPort.device = 'mobile';
                         this.viewPort.orientation = 'landscape';
                         break;
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
                     /* For high res like the ipad pro  */
                     case this.breakpointObserver.isMatched('(min-width: 840px) and (orientation: portrait)'):
-                        this.isHandset = true;
+                        this.isHandset = false;
                         this.viewPort.device = 'tablet';
                         this.viewPort.orientation = 'portrait';
                         break;
