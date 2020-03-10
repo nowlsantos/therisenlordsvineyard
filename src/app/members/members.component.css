@@ -38,6 +38,11 @@
     margin: 0;
 }
 
+:host ::ng-deep .mat-tab-label {
+    color: black;
+    font-weight: bold; 
+}
+
 .mat-card-subtitle {
     color: var(--secondary);
 }
