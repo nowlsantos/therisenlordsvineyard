@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MembersComponent } from './members.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 
 const routes: Routes = [
     {
@@ -12,7 +13,8 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [
-        MembersComponent
+        MembersComponent,
+        MemberDetailComponent
     ],
     imports: [
         SharedModule,

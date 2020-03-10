@@ -12,7 +12,7 @@ export class MemberService {
     private memberDoc: AngularFirestoreDocument<Member>;
 
     constructor(private db: AngularFirestore) {
-        this.memberCollection = this.db.collection<Member>('members', ref => ref.orderBy('displayName', 'asc'));
+        this.memberCollection = this.db.collection<Member>('members', ref => ref.orderBy('lastname', 'asc'));
     }
 
     getMembers(): Observable<Member[]> {
@@ -35,7 +35,7 @@ export class MemberService {
 
     filterBy(gender: string): Observable<Member[]> {
         this.memberCollection = this.db.collection<Member>('members', ref => ref.where('gender', '==', gender)
-                                                                                .orderBy('displayName', 'asc'));
+                                                                                .orderBy('lastname', 'asc'));
         return this.memberCollection.valueChanges({ idField: 'id' });
     }
 }

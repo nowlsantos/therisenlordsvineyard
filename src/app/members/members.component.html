@@ -2,39 +2,39 @@
     <mat-tab-group>
         <mat-tab label="Members">
             <div class="grid">
-                <div *ngFor="let member of member$ | async as Member; trackBy: trackByFn">
+                <div *ngFor="let member of member$ | async; trackBy: trackByFn" (click)="openBottomSheet(member)">
                     <mat-card>
                         <mat-card-header>
-                            <mat-card-title>{{ member.displayName }}</mat-card-title>
-                            <mat-card-subtitle>{{ member.name }}</mat-card-subtitle>
+                            <mat-card-title>{{ member.firstname }} {{ member.lastname }}</mat-card-title>
+                            <!-- <mat-card-subtitle>{{ member.name }}</mat-card-subtitle> -->
                         </mat-card-header>
-                        <img mat-card-image [src]="member.photo" alt="Photo of member">
+                        <img mat-card-image [src]="member.photo" alt="Photo of members">
                     </mat-card>
                 </div>
             </div>
         </mat-tab>
         <mat-tab label="Sisters">
             <div class="grid">
-                <div *ngFor="let member of sister$ | async as Member; trackBy: trackByFn">
+                <div *ngFor="let sis of sister$ | async; trackBy: trackByFn" (click)="openBottomSheet(sis)">
                     <mat-card>
                         <mat-card-header>
-                            <mat-card-title>{{ member.displayName }}</mat-card-title>
-                            <mat-card-subtitle>{{ member.name }}</mat-card-subtitle>
+                            <mat-card-title>{{ sis.firstname }} {{ sis.lastname }}</mat-card-title>
+                            <!-- <mat-card-subtitle>{{ sis.name }}</mat-card-subtitle> -->
                         </mat-card-header>
-                        <img mat-card-image [src]="member.photo" alt="Photo of Sisters">
+                        <img mat-card-image [src]="sis.photo" alt="Photo of Sisters">
                     </mat-card>
                 </div>
             </div>
         </mat-tab>
         <mat-tab label="Brothers">
             <div class="grid" >
-                <div *ngFor="let member of brother$ | async as Member; trackBy: trackByFn">
+                <div *ngFor="let bro of brother$ | async; trackBy: trackByFn" (click)="openBottomSheet(bro)">
                     <mat-card>
                         <mat-card-header>
-                            <mat-card-title>{{ member.displayName }}</mat-card-title>
-                            <mat-card-subtitle>{{ member.name }}</mat-card-subtitle>
+                            <mat-card-title>{{ bro.firstname }} {{ bro.lastname }}</mat-card-title>
+                            <!-- <mat-card-subtitle>{{ bro.name }}</mat-card-subtitle> -->
                         </mat-card-header>
-                        <img mat-card-image [src]="member.photo" alt="Photo of Brothers">
+                        <img mat-card-image [src]="bro.photo" alt="Photo of Brothers">
                     </mat-card>
                 </div>
             </div>

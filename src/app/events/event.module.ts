@@ -4,17 +4,17 @@ import { EventsComponent } from './events.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {
-      path: '', component: EventsComponent,
-      data: { state: 'events' }
-  }
+    {
+        path: '', component: EventsComponent,
+        data: { state: 'events' }
+    }
 ];
 
 @NgModule({
-  declarations: [EventsComponent],
-  imports: [
-    SharedModule,
-    RouterModule.forChild(routes)
-  ]
+    declarations: [EventsComponent],
+    imports: [
+        SharedModule,
+        RouterModule.forChild(routes)
+    ]
 })
 export class EventModule { }

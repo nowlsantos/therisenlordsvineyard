@@ -1,0 +1,28 @@
+<div class="bottom-sheet">
+    <!-- <mat-card class="member-card">
+        <mat-card-header>
+            <mat-card-title>{{ member?.firstname }} {{ member?.lastname }}</mat-card-title>
+            <mat-card-subtitle>Nickname: {{ member?.name }}</mat-card-subtitle>
+        </mat-card-header>
+    
+        <img mat-card-image [src]="member?.photo" alt="Photo of a member">
+        <mat-card-content>
+            <p *ngIf="member?.address">Address: {{ member?.address }}</p>
+            <p *ngIf="member?.email">Email: {{ member?.email }}</p>
+            <div class="mobile">
+                <p *ngIf="member?.mobile">Mobile: 0{{ member?.mobile }}</p>
+                <p *ngIf="member?.phone">Phone: {{ member?.phone }}</p>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="closeBottomSheet($event)">Close</button>
+        </mat-card-actions>
+    </mat-card> -->
+    <h2>{{ member?.firstname }} {{ member?.lastname }}</h2>
+    <h3>Nickname: {{ member?.name }}</h3>
+    <p *ngIf="member?.address">Address: {{ member?.address }}</p>
+    <p *ngIf="member?.email">Email: {{ member?.email }}</p>
+    <p *ngIf="member?.mobile">Mobile: 0{{ member?.mobile }}</p>
+    <p *ngIf="member?.phone">Phone: {{ member?.phone }}</p>
+    <button mat-raised-button (click)="closeBottomSheet($event)">Close</button>
+</div>
