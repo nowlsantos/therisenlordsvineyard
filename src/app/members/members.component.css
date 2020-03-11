@@ -90,7 +90,6 @@
 /* Web landscape */
 @media (min-width: 1280px) and (orientation: landscape),
        (min-width: 960px) and (max-width: 1279.99px) and (orientation: landscape) {
-
     .grid {
         display: grid;
         position: relative;

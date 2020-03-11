@@ -46,7 +46,8 @@ section {
        (min-width: 840px) and (orientation: portrait) {
     section {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1em;
         margin: 0.6em auto;
         background-color: #2988BC;
@@ -86,7 +87,8 @@ section {
 @media (min-width: 600px) and (max-width: 959.99px) and (orientation: landscape) {
     section {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1em;
         margin: 0.6em auto;
         background-color: #2988BC;
@@ -124,7 +126,8 @@ section {
         (min-width: 1280px) and (orientation: landscape) {
     section {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1em;
         max-width: 1280px;
         margin: 0.6em auto;

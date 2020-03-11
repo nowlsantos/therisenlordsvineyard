@@ -31,7 +31,9 @@
     <mat-sidenav-content class="sidenav-content" role="main">
         <app-navbar (opened)=sidenav.open()></app-navbar>
         <main [@routeAnimation]="getState(myOutlet)">
-            <router-outlet #myOutlet="outlet"></router-outlet>
+            <router-outlet #myOutlet="outlet">
+                <app-loader></app-loader>
+            </router-outlet>
         </main>
     </mat-sidenav-content>
 </mat-sidenav-container>
