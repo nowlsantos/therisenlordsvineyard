@@ -22,7 +22,7 @@
                     [routerLinkActiveOptions]="{ exact: true }">Members
                 </a>
             </li>
-            <ng-container *ngIf="!isHandset && (displayName != 'Friend'); else logout">
+            <ng-container *ngIf="!isHandset; else logout">
                 <li>
                     <a  [routerLink]="['/admin']" 
                         routerLinkActive="active"
